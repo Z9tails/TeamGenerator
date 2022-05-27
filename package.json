@@ -1,0 +1,26 @@
+{
+  "name": "teamgenerator",
+  "version": "1.0.0",
+  "description": "OOP Teamgenerator AS A manager I WANT to generate a webpage that displays my team's basic info SO THAT I have quick access to their emails and GitHub profiles",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest --verbose test/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Z9tails/TeamGenerator.git"
+  },
+  "author": "Mark",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Z9tails/TeamGenerator/issues"
+  },
+  "homepage": "https://github.com/Z9tails/TeamGenerator#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4",
+    "jest": "^28.1.0"
+  }
+}
