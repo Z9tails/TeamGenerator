@@ -1,9 +1,9 @@
 const Manager = require('../lib/Manager.js')
 
-test('Can Set office number as constructor', () => {
-  const testValue = "Office Number";
+test('Can Set phone number as constructor', () => {
+  const testValue = 101;
   const m = new Manager("Manage", 1, "test@test.com", testValue);
-  expect(m.office).toBe(testValue);
+  expect(m.phoneNum).toBe(testValue);
 });
 
 test('getRole() should return "Manager"', () => {
@@ -11,3 +11,4 @@ test('getRole() should return "Manager"', () => {
   const m = new Manager("Manage", 1, "test@test.com");
   expect(m.getRole()).toBe(testValue);
 });
+ 
