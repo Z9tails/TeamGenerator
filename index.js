@@ -14,7 +14,7 @@ const init = () => {
         type: 'list',
         name: 'filling',
         message: 'What type of employee would you like to add?',
-        choices: ['Intern', 'Engineer', 'Manager',]
+        choices: ['Manager', 'Engineer', 'Intern',]
     }).then(
             (answers) => {
                 if (answers.filling === "Intern") {
@@ -81,7 +81,7 @@ const generateManager = async () => {
     {
       type: "input",
       name: "phone",
-      message: "What's your phone number'",
+      message: "What's your phone number",
     },
   ]);
 
@@ -145,38 +145,3 @@ const generateHTML =(team) =>{
 }
 
 init()
-
-
-//         
-//     //Manager Question
-//     {
-//         type: "input",
-//         name: "office",
-//         message: "Office Number?",
-//     },
-//     //Engineer Question
-//     {
-//       type: "input",
-//       name: "github",
-//       message: "What is your github?",
-//     },
-//     //Intern Question
-//     {
-//     
-//     }
-//    ])
-//   //End of Questions
-//   //Function for generating file
-//   .then((response) => {
-//       fs.writeFile(`${response.title}.md`, generateTeam(response), err => {
-//           if (err) throw err;
-//         });
-//        }
-// );
-
-
-//
-//switch case to ask questions for each type of employee
-//write file to generate html (challenge 9  function)
-//it's supposted to show up in cards
-//create class card use the css
