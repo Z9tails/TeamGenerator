@@ -1,4 +1,3 @@
-# TeamGenerator
 
 # Team Profile Generator
 
@@ -20,6 +19,7 @@
 
 ## Description
 Creating TeamGenerator using Object Oriented Programming
+
 ## User Story
 AS A manager
 I WANT to generate a webpage that displays my team's basic info
@@ -44,11 +44,14 @@ THEN I am prompted to enter the intern’s name, ID, email, and school, and I am
 WHEN I decide to finish building my team
 THEN I exit the application, and the HTML is generated
 
-## Video
+## Videos
 
+https://user-images.githubusercontent.com/100103488/172097741-db9762ee-2d54-48e8-9735-3fee2a8378f0.mp4
+
+https://user-images.githubusercontent.com/100103488/172097766-6cdf5120-0b3d-4415-8c8a-ee85c2bfdd34.mp4
 
 ## Installation
-Install node.js, install bulma, install jest for testing.
+Install node.js, inquiry, and install jest for testing.
 
 ## Usage
 Creating a quick list of a programming team.
