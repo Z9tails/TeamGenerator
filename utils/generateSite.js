@@ -7,8 +7,8 @@ module.exports = function generateSite(team) {
     team.forEach(member => {
       if (member.getRole() === 'Intern') {
         template += `<nav class= "level">
-                      <div class="card">
-                        <div class="card-image is-centered">
+                      <div class="card mb-4">
+                        <div class="card-image is-inline-block">
                           <i class="fas fa-baby-carriage"></i>
                         </div>
                         <div class="card-content">
@@ -16,7 +16,7 @@ module.exports = function generateSite(team) {
                             <div class="media-content">
                               <p class="title is-4">name:${member.name}</p>
                               <p class="subtitle is-6">id:${member.id}</p>
-                              <p class="subtitle is-6">email:${member.email}</p>
+                              <p class="subtitle is-6"><a href="mailto:${member.email}">email</a></p>
                               <p class="subtitle is-6">school:${member.school}</p>
                             </div>
                           </div>
@@ -28,8 +28,8 @@ module.exports = function generateSite(team) {
       } else if (member.getRole() === 'Manager') {
         template += `
                     <nav class= "level">
-                    <div class="card">
-                      <div class="card-image is-centered">
+                    <div class="card ">
+                      <div class="card-image is-inline-block">
                         <i class="fas fa-coffee"></i>
                       </div>
                        <div class="card-content">
@@ -37,7 +37,7 @@ module.exports = function generateSite(team) {
                               <div class="media-content">
                                 <p class="title is-4">name:${member.name}</p>
                                 <p class="subtitle is-6">id:${member.id}</p>
-                                <p class="subtitle is-6">email: [email](mailto:${member.email})</p>
+                                <p class="subtitle is-6"><a href="mailto:${member.email}">email</a></p>
                                 <p class="subtitle is-6"><a href="phone:${member.phoneNum}">phone</a></p>
                               </div> 
                             </div>
@@ -46,27 +46,24 @@ module.exports = function generateSite(team) {
                     </nav>`;
       } else {
         template += `
-                   <nav class="level'>
-        <div class="card">
-        <div class="card-image is-centered">
-        <i class="fas fa-space-shuttle"></i>
-        </div>
-        <div class="card-content">
-    <div class="media">
-      <div class="media-content">
-        <p class="title is-4">name:${member.name}</p>
-        <p class="subtitle is-6">id:${member.id}</p>
-        <p class="subtitle is-6">email: [email](mailto:${member.email})</p>
-        <p class="subtitle is-6">github: [GitHub Profile](https://github.com/${member.github})</p>
-      </div> 
-    </div>
-    </div>
-    </nav>
-        
-        
-        
-        
-      `;
+                    <nav class="level">
+                    <div class="card">
+                        <div class="card-image is-inline-block">
+                          <i class="fas fa-space-shuttle"></i>
+                        </div>
+                      <div class="card-content">
+                        <div class="media">
+                          <div class="media-content">
+                            <p class="title is-4">name:${member.name}</p>
+                            <p class="subtitle is-6">id:${member.id}</p>
+                            <p class="subtitle is-6"><a href="mailto:${member.email}">email</a></p>
+                            <p class="subtitle is-6"><a href="https://github.com/${member.github}">github</a></p>
+                          </div> 
+                        </div>
+                      </div>
+                      </div>
+                    </nav>
+         `;
       }
     })
     return `${template}`
@@ -84,14 +81,15 @@ module.exports = function generateSite(team) {
     <script src="https://kit.fontawesome.com/be51fda147.js" crossorigin="anonymous"></script>
     <title>Your Team</title>
 </head>
-<section class="section">
+<section class="section has-background-success">
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-half">
         <h1 class="title is-1 centered has-text-primary-dark">YOUR TEAM</h1>
-${site()}
+
       </div>
     </div>
+    ${site()}
   </div>
 
 <body>
